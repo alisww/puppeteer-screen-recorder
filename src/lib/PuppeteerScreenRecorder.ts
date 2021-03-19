@@ -107,9 +107,6 @@ export class PuppeteerScreenRecorder {
    * ```
    */
   public async start(savePath: string): Promise<PuppeteerScreenRecorder> {
-    if (extname(savePath) !== '.mp4') {
-      throw new Error('Arguments should be .mp4 extension');
-    }
 
     await this.ensureDirectoryExist(dirname(savePath));
 
